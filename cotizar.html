@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cotiza tu seguro de auto o moto en minutos.">
+  <title>Cotiza tu Seguro Ahora! - IIB Seguros</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <!-- Updated image source to "IIB logo.png" -->
+      <img src="images/IIB logo.png" alt="IIB Seguros Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="seguros.html">Seguros</a></li>
+          <li><a href="fianzas.html">Fianzas</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="alianzas.html">Alianzas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Quote Form Section -->
+    <section id="quote-form">
+      <h2>Cotiza tu Seguro Ahora!</h2>
+      <p>Selecciona el tipo de vehículo y completa los detalles para comparar tarifas:</p>
+      <form id="vehicleForm">
+        <!-- Vehicle Type Buttons -->
+        <div class="vehicle-type">
+          <button type="button" class="btn vehicle-btn" data-type="Auto">Coche</button>
+          <button type="button" class="btn vehicle-btn" data-type="Moto">Moto</button>
+        </div>
+        <input type="hidden" id="vehicleType" name="vehicleType" required>
+
+        <!-- Brand Dropdown -->
+        <label for="vehicleBrand">Marca:</label>
+        <select id="vehicleBrand" name="vehicleBrand" required>
+          <option value="" disabled selected>Selecciona la marca...</option>
+        </select>
+        <br><br>
+
+        <!-- Model Dropdown -->
+        <label for="vehicleModel">Modelo:</label>
+        <select id="vehicleModel" name="vehicleModel" required disabled>
+          <option value="" disabled selected>Selecciona el modelo...</option>
+        </select>
+        <br><br>
+
+        <!-- Year Dropdown -->
+        <label for="vehicleYear">Año:</label>
+        <select id="vehicleYear" name="vehicleYear" required>
+          <option value="" disabled selected>Selecciona el año...</option>
+        </select>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn">Consultar</button>
+      </form>
+    </section>
+
+    <!-- Rates Table Section -->
+    <section id="rates" style="display: none;">
+      <h2>Comparar Tarifas</h2>
+      <table class="rates-table">
+        <thead>
+          <tr>
+            <th>Aseguradora</th>
+            <th>Tipo de Seguro</th>
+            <th>Tarifa</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="ratesTable">
+          <!-- Dynamic rates will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 IIB Seguros. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

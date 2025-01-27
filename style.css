@@ -1,0 +1,489 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  background: #00264d;
+  color: white;
+  padding: 1em 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.logo {
+  height: 60px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+/* Highlight active menu item or on hover */
+header nav ul li a:hover,
+header nav ul li a.active {
+  background: #004080;
+}
+
+/* Hero Section (Index Page) */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.5), rgba(0, 0, 50, 0.5)),
+    url('images/hero-background.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  padding: 0.8em 1.5em;
+  background: #00264d;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #004080;
+}
+
+/* Introduction Section (Index Page) */
+.introduction {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.intro-text {
+  margin-bottom: 1.5em;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.highlight-text {
+  background: linear-gradient(45deg, #e6f2ff, #cce6ff);
+  padding: 1em;
+  border-radius: 8px;
+  color: #00264d;
+  margin-top: 2em;
+  font-size: 1.3rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Section (Index Page) */
+.cta-section {
+  text-align: center;
+  padding: 2em 1em;
+  background: #f4f4f9;
+}
+
+.cta-section h2 {
+  color: #00264d;
+  margin-bottom: 1em;
+}
+
+.cta-buttons .btn {
+  background: #004080;
+  color: white;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0.5em;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  background: #003366;
+}
+
+/* Quote Form (Cotizar Page) */
+#quote-form {
+  padding: 2em 1em;
+  background: white;
+  text-align: center;
+  margin: 2em auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+#quote-form form {
+  text-align: left;
+}
+
+#quote-form label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  display: block;
+  font-size: 1rem;
+}
+
+#quote-form select,
+#quote-form .btn {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#quote-form select:hover,
+#quote-form select:focus,
+#quote-form .btn:hover {
+  border-color: #004080;
+  box-shadow: 0 0 5px rgba(0, 64, 128, 0.5);
+}
+
+#quote-form .btn {
+  background: #004080;
+  color: white;
+  cursor: pointer;
+}
+
+#quote-form .btn:hover {
+  background: #003366;
+}
+
+/* Vehicle Type Buttons (Cotizar Page) */
+.vehicle-type {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.vehicle-btn {
+  padding: 1em 2em;
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.vehicle-btn:hover {
+  background: #00264d;
+  color: #ffffff;
+}
+
+.vehicle-btn.selected {
+  background: #00264d;
+  color: #ffffff;
+  border-color: #00264d;
+}
+
+/* Rates Table (Cotizar Page) */
+.rates-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 2em auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+.rates-table th,
+.rates-table td {
+  padding: 1em;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.rates-table th {
+  background: #004080;
+  color: white;
+}
+
+.rates-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* Hero Section (Seguros Page) */
+.hero-seguros {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('images/seguros-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-seguros-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-seguros-content p {
+  font-size: 1.2rem;
+}
+
+.seguros-content {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.seguros-intro p {
+  margin-bottom: 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.seguros-block {
+  margin: 2em 0;
+}
+
+.seguros-block h2 {
+  color: #00264d;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+.seguros-block h3 {
+  color: #333;
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+}
+
+.seguros-block p,
+.seguros-block ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.seguros-block ul {
+  list-style: disc;
+  margin-left: 1.5em;
+}
+
+.contact-info p {
+  margin-bottom: 1em;
+}
+
+.contact-info .closing-quote {
+  margin-top: 1em;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Hero Section (Fianzas Page) */
+.hero-fianzas {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('images/fianzas-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-fianzas-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-fianzas-content p {
+  font-size: 1.2rem;
+}
+
+.fianzas-content {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.fianzas-intro p {
+  margin-bottom: 1.5em;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.fianzas-block {
+  margin: 2em 0;
+}
+
+.fianzas-block h2 {
+  color: #00264d;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+.fianzas-block ul {
+  list-style: disc;
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.fianzas-block p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+.hero-servicios {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('images/servicios-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-servicios-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-servicios-content p {
+  font-size: 1.2rem;
+}
+
+/* Optional “cool style” blocks for Servicios page */
+.servicios-block {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 2em 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.hero-alianzas {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('images/alianzas-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-alianzas-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-alianzas-content p {
+  font-size: 1.2rem;
+}
+
+.alianzas-content {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* You can give this block a "cool style" */
+.alianzas-block {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 2em 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.hero-contacto {
+  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 50, 0.6), rgba(0, 0, 50, 0.6)),
+    url('images/contacto-hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-contacto-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-contacto-content p {
+  font-size: 1.2rem;
+}
+
+.contacto-content {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.contacto-block {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 2em 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.contacto-block h2 {
+  color: #00264d;
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+}
+
+.closing-quote {
+  margin-top: 1em;
+  font-style: italic;
+  text-align: center;
+}
